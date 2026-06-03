@@ -30,7 +30,7 @@ function App() {
       formData.append("file1", file1);
       formData.append("file2", file2);
       const [start, end] = await Promise.all([
-        fetch("http://localhost:8080/api/compare", {
+        fetch(`/api/compare`, {
           method: "POST",
           body: formData,
         }),

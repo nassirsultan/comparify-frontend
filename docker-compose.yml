@@ -1,0 +1,11 @@
+# prettier-ignore
+version: "3.8"
+services:
+  backend-service:
+    image: comparify-backend
+    ports:
+      - "8080:8080"
+  frontend-service:
+    image: comparify-frontend
+    ports:
+      - "3000:80"
