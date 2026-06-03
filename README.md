@@ -1,16 +1,54 @@
-# React + Vite
+# Comparify - Document Comparison App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📸 Screenshot
+<img width="1389" height="935" alt="image" src="https://github.com/user-attachments/assets/9a5d6e96-d0e6-4136-af8e-6ecbed71df72" />
 
-Currently, two official plugins are available:
+A full-stack document comparison application that uses **Cosine Similarity** to measure how similar two text documents are.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- Upload two `.txt` files via click or drag & drop
+- Cosine similarity algorithm for accurate document comparison
+- Real-time similarity score with animated result
+- File type validation (frontend & backend)
+- Loading spinner during comparison
+- Error handling for network and file issues
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend**
+- React (Vite)
+- Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Backend**
+- Java 11
+- Spring Boot
+- REST API
+
+## 📦 Getting Started
+
+### Prerequisites
+- Node.js
+- Java 11+
+- Maven
+
+### Run Frontend
+```bash
+npm install
+npm run dev
+```
+
+### Run Backend
+```bash
+cd comparify-backend
+mvn spring-boot:run
+```
+
+## 🔗 API
+
+`POST /api/compare`
+- Accepts two `.txt` files as `multipart/form-data`
+- Returns similarity score as JSON
+
+## 👨‍💻 Author
+Nassir Sultan
