@@ -1,5 +1,8 @@
 # Comparify - Document Comparison App
 
+## 📸 Screenshot
+<img width="1389" height="935" alt="image" src="https://github.com/user-attachments/assets/9a5d6e96-d0e6-4136-af8e-6ecbed71df72" />
+
 A full-stack document comparison application that uses **Cosine Similarity** to measure how similar two text documents are.
 
 ## 🚀 Features
@@ -46,9 +49,6 @@ mvn spring-boot:run
 `POST /api/compare`
 - Accepts two `.txt` files as `multipart/form-data`
 - Returns similarity score as JSON
-
-## 📸 Screenshot
-<img width="1389" height="935" alt="image" src="https://github.com/user-attachments/assets/9a5d6e96-d0e6-4136-af8e-6ecbed71df72" />
 
 ## 👨‍💻 Author
 Nassir Sultan
