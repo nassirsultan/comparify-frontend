@@ -30,7 +30,7 @@ function App() {
       formData.append("file1", file1);
       formData.append("file2", file2);
       const [start, end] = await Promise.all([
-        fetch(`/api/compare`, {
+        fetch(`${import.meta.env.VITE_API_URL}/api/compare`, {
           method: "POST",
           body: formData,
         }),
@@ -63,7 +63,7 @@ function App() {
   return (
     <div>
       <Header />
-      <div className="flex gap-10 p-20 max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-10 p-10 max-w-7xl mx-auto">
         <DocumentUpload id="file1" handleFileChange={handleFileChange} />
         <DocumentUpload id="file2" handleFileChange={handleFileChange} />
       </div>

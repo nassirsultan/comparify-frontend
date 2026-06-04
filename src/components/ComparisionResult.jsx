@@ -1,6 +1,6 @@
 function ComparisionResult({ similarityScore }) {
   return (
-    <div className="flex max-w-7xl mx-auto justify-center mt-15">
+    <div className="flex max-w-7xl mx-auto justify-center mt-15 text-center">
       {similarityScore !== null && (
         <div className="p-5 text-white animate-float">
           <span className="text-4xl font-bold animate-slide-in">
