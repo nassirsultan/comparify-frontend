@@ -7,6 +7,7 @@ function App() {
   const [file1, setFile1] = useState(null);
   const [file2, setFile2] = useState(null);
   const [similarityScore, setSimilarityScore] = useState(null);
+  const [aiInsights, setAiInsights] = useState(null);
   const [loading, setLoading] = useState(false);
 
   function handleFileChange(id, file) {
@@ -25,6 +26,7 @@ function App() {
     }
     setLoading(true);
     setSimilarityScore(null);
+    setAiInsights(null);
     try {
       const formData = new FormData();
       formData.append("file1", file1);
@@ -49,6 +51,7 @@ function App() {
 
       const data = await start.json();
       setSimilarityScore(data.similarityScore);
+      setAiInsights(data.aiInsights);
     } catch (error) {
       if (error instanceof TypeError) {
         alert("Upload failed. Please check your files and try again.");
@@ -83,7 +86,10 @@ function App() {
           )}
         </button>
       </div>
-      <ComparisionResult similarityScore={similarityScore} />
+      <ComparisionResult
+        similarityScore={similarityScore}
+        aiInsights={aiInsights}
+      />
     </div>
   );
 }
