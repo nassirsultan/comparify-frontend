@@ -22,6 +22,7 @@ function App() {
     if (!file1 || !file2) {
       alert("Please upload both files before comparing!");
       setSimilarityScore(null);
+      setAiInsights(null);
       return;
     }
     setLoading(true);
